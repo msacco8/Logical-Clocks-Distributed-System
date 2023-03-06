@@ -67,14 +67,15 @@ def machine(config):
     prod_thread.start()
  
 
-while True:
-    code = random.randint(1,3)
-    localHost= "127.0.0.1"
+    while True:
+        code = random.randint(1,3)
+
+localHost= "127.0.0.1"
     
-    if __name__ == '__main__':
-        port1 = 2056
-        port2 = 3056
-        port3 = 4056
+if __name__ == '__main__':
+    port1 = 2056
+    port2 = 3056
+    port3 = 4056
     
     config1=[localHost, port1, port2,]
     p1 = Process(target=machine, args=(config1,))
