@@ -32,11 +32,13 @@ def producer(portVal):
         s.connect((host,port))
         print("Client-side connection success to port val:" + str(portVal) + "\n")
 
+        ######## probably delete -- want to send messages randomly according to RNG
         while True:
             codeVal = str(code)
             time.sleep(sleepVal)
             s.send(codeVal.encode('ascii'))
             print("msg sent", codeVal)
+    
     
     except socket.error as e:
         print ("Error connecting producer: %s" % e)
@@ -63,8 +65,11 @@ def machine(config):
     #add delay to initialize the server-side logic on all processes
     time.sleep(5)
     # extensible to multiple producers
-    prod_thread = Thread(target=producer, args=(config[2],))
-    prod_thread.start()
+    # NEED ANOTHER
+    prod_thread1 = Thread(target=producer, args=(config[2],))
+    prod_thread2 = Thread(target=producer, args=(config[3],))
+    prod_thread1.start()
+    prod_thread2.start()
  
 
     while True:
@@ -77,11 +82,11 @@ if __name__ == '__main__':
     port2 = 3056
     port3 = 4056
     
-    config1=[localHost, port1, port2,]
+    config1=[localHost, port1, port2, port3]
     p1 = Process(target=machine, args=(config1,))
-    config2=[localHost, port2, port3]
+    config2=[localHost, port2, port3, port1]
     p2 = Process(target=machine, args=(config2,))
-    config3=[localHost, port3, port1]
+    config3=[localHost, port3, port1, port2]
     p3 = Process(target=machine, args=(config3,))
     
     p1.start()
