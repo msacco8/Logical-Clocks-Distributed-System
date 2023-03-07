@@ -11,8 +11,7 @@ import random
 
 def consumer(conn):
     print("consumer accepted connection" + str(conn)+"\n")
-    msg_queue=[]
-    sleepVal = 0.900
+    sleepVal = 0.1
     while True:
         time.sleep(sleepVal)
         data = conn.recv(1024)
@@ -34,10 +33,22 @@ def producer(portVal):
 
         ######## probably delete -- want to send messages randomly according to RNG
         while True:
-            codeVal = str(code)
-            time.sleep(sleepVal)
-            s.send(codeVal.encode('ascii'))
-            print("msg sent", codeVal)
+            time.sleep(1/clock_speed)
+            if not msg_queue:
+                # randomn number generator logic
+                '''
+                FOR SENDING STUFF:
+                codeVal = str(code)
+                time.sleep(sleepVal)
+                s.send(codeVal.encode('ascii'))
+                print("msg sent", codeVal)
+                '''
+                pass
+
+            else:
+                msg = msg_queue.pop()
+                logical_clock += 1
+                # log it
     
     
     except socket.error as e:
@@ -59,21 +70,28 @@ def init_machine(config):
 def machine(config):
     config.append(os.getpid())
     global code
+
+    global msg_queue
+    global clock_speed
+    global logical_clock
+    msg_queue = []
+    clock_speed = random.randint(1,6)
+    logical_clock = 0
+
     #print(config)
     init_thread = Thread(target=init_machine, args=(config,))
     init_thread.start()
     #add delay to initialize the server-side logic on all processes
     time.sleep(5)
     # extensible to multiple producers
-    # NEED ANOTHER
     prod_thread1 = Thread(target=producer, args=(config[2],))
     prod_thread2 = Thread(target=producer, args=(config[3],))
     prod_thread1.start()
     prod_thread2.start()
- 
 
     while True:
         code = random.randint(1,3)
+
 
 localHost= "127.0.0.1"
     
