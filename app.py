@@ -1,5 +1,5 @@
 # Sample Code in Python
-from multiprocessing import Process
+from multiprocessing import Process, Queue
 import os
 import socket
 from _thread import *
@@ -15,41 +15,57 @@ def consumer(conn):
     while True:
         time.sleep(sleepVal)
         data = conn.recv(1024)
-        print("msg received\n")
         dataVal = data.decode('ascii')
-        print("msg received:", dataVal)
-        msg_queue.append(dataVal)
+        if dataVal != '':
+            msg_queue.put(dataVal)
  
 
-def producer(portVal):
-    host= "127.0.0.1"
-    port = int(portVal)
-    s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    sleepVal = 0.500
+def producer(portVals):
+    host = "127.0.0.1"
+    logical_clock = 0
+    port1, port2 = int(portVals[0]), int(portVals[1])
+    sock1, sock2 = socket.socket(socket.AF_INET,socket.SOCK_STREAM), socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    clock_speed = random.randint(1,6)
     #sema acquire
     try:
-        s.connect((host,port))
-        print("Client-side connection success to port val:" + str(portVal) + "\n")
+        sock1.connect((host,port1))
+        print("Client-side connection success to port val:" + str(port1) + "\n")
+        sock2.connect((host,port2))
+        print("Client-side connection success to port val:" + str(port2) + "\n")
 
         ######## probably delete -- want to send messages randomly according to RNG
+        # while True:
+        #     codeVal = str(1)
+        #     time.sleep(sleepVal)
+        #     s.send(codeVal.encode('ascii'))
+        #     print("msg sent", codeVal)
+
         while True:
-            time.sleep(1/clock_speed)
-            if not msg_queue:
-                # randomn number generator logic
-                '''
-                FOR SENDING STUFF:
-                codeVal = str(code)
-                time.sleep(sleepVal)
-                s.send(codeVal.encode('ascii'))
-                print("msg sent", codeVal)
-                '''
-                pass
+            time.sleep(1.0/clock_speed)
+            if msg_queue.empty():
+                logical_clock += 1
+                code = random.randint(1,10)
+                if code == 1:
+                    sock1.send(str(logical_clock).encode('ascii'))
+                    # LOG
+
+                if code == 2:
+                    sock2.send(str(logical_clock).encode('ascii'))
+                    # LOG
+
+                if code == 3:
+                    sock1.send(str(logical_clock).encode('ascii')) 
+                    sock2.send(str(logical_clock).encode('ascii'))
+
+                else:
+                    pass
+                    # INTERNAL EVENT: DO NOTHING BUT LOG
 
             else:
-                msg = msg_queue.pop()
-                logical_clock += 1
-                # log it
-    
+                msg = msg_queue.get()
+                print(msg)
+                logical_clock = max(logical_clock+1, int(msg))
+                # LOG THIS
     
     except socket.error as e:
         print ("Error connecting producer: %s" % e)
@@ -69,14 +85,9 @@ def init_machine(config):
 
 def machine(config):
     config.append(os.getpid())
-    global code
 
     global msg_queue
-    global clock_speed
-    global logical_clock
-    msg_queue = []
-    clock_speed = random.randint(1,6)
-    logical_clock = 0
+    msg_queue = Queue()
 
     #print(config)
     init_thread = Thread(target=init_machine, args=(config,))
@@ -84,13 +95,8 @@ def machine(config):
     #add delay to initialize the server-side logic on all processes
     time.sleep(5)
     # extensible to multiple producers
-    prod_thread1 = Thread(target=producer, args=(config[2],))
-    prod_thread2 = Thread(target=producer, args=(config[3],))
-    prod_thread1.start()
-    prod_thread2.start()
-
-    while True:
-        code = random.randint(1,3)
+    prod_thread = Thread(target=producer, args=(config[2:],))
+    prod_thread.start()
 
 
 localHost= "127.0.0.1"
