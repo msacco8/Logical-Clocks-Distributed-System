@@ -949,3 +949,140 @@ TRIAL 5
 2023-03-07 21:53:12 INFO     Message received: 202 | local logical clock time: 203 | length of message queue: 1
 2023-03-07 21:53:13 INFO     Message received: 203 | local logical clock time: 204 | length of message queue: 0
 2023-03-07 21:53:13 INFO     Internal event | local logical clock time: 205
+
+TRIAL 6
+2023-03-08 11:45:56 INFO     Starting processes for host 3056 with 2 operations per second.
+2023-03-08 11:45:56 INFO     Client-side connection success to port val:4056
+2023-03-08 11:45:56 INFO     Client-side connection success to port val:2056
+2023-03-08 11:45:57 INFO     Message received: 1 | local logical clock time: 2 | length of message queue: 0
+2023-03-08 11:45:57 INFO     Message received: 5 | local logical clock time: 6 | length of message queue: 0
+2023-03-08 11:45:58 INFO     Message received: 6 | local logical clock time: 7 | length of message queue: 1
+2023-03-08 11:45:58 INFO     Message received: 8 | local logical clock time: 9 | length of message queue: 1
+2023-03-08 11:45:59 INFO     Message received: 9 | local logical clock time: 10 | length of message queue: 0
+2023-03-08 11:45:59 INFO     Messages sent to: 4056 and 2056 | local logical clock time: 11
+2023-03-08 11:46:00 INFO     Message received: 19 | local logical clock time: 20 | length of message queue: 0
+2023-03-08 11:46:00 INFO     Internal event | local logical clock time: 21
+2023-03-08 11:46:01 INFO     Internal event | local logical clock time: 22
+2023-03-08 11:46:01 INFO     Internal event | local logical clock time: 23
+2023-03-08 11:46:02 INFO     Internal event | local logical clock time: 24
+2023-03-08 11:46:02 INFO     Internal event | local logical clock time: 25
+2023-03-08 11:46:03 INFO     Internal event | local logical clock time: 26
+2023-03-08 11:46:03 INFO     Message sent to: 4056 | local logical clock time: 27
+2023-03-08 11:46:03 INFO     Internal event | local logical clock time: 27
+2023-03-08 11:46:04 INFO     Message received: 44 | local logical clock time: 45 | length of message queue: 0
+2023-03-08 11:46:04 INFO     Message received: 45 | local logical clock time: 46 | length of message queue: 0
+2023-03-08 11:46:05 INFO     Message received: 49 | local logical clock time: 50 | length of message queue: 0
+2023-03-08 11:46:05 INFO     Message received: 52 | local logical clock time: 53 | length of message queue: 0
+2023-03-08 11:46:06 INFO     Message received: 54 | local logical clock time: 55 | length of message queue: 0
+2023-03-08 11:46:06 INFO     Message received: 58 | local logical clock time: 59 | length of message queue: 0
+2023-03-08 11:46:07 INFO     Message received: 61 | local logical clock time: 62 | length of message queue: 1
+2023-03-08 11:46:07 INFO     Message received: 62 | local logical clock time: 63 | length of message queue: 1
+2023-03-08 11:46:08 INFO     Message received: 63 | local logical clock time: 64 | length of message queue: 1
+2023-03-08 11:46:08 INFO     Message received: 67 | local logical clock time: 68 | length of message queue: 0
+2023-03-08 11:46:09 INFO     Internal event | local logical clock time: 69
+2023-03-08 11:46:09 INFO     Message received: 77 | local logical clock time: 78 | length of message queue: 0
+2023-03-08 11:46:10 INFO     Internal event | local logical clock time: 79
+2023-03-08 11:46:10 INFO     Internal event | local logical clock time: 80
+2023-03-08 11:46:11 INFO     Message received: 84 | local logical clock time: 85 | length of message queue: 0
+2023-03-08 11:46:11 INFO     Internal event | local logical clock time: 86
+2023-03-08 11:46:12 INFO     Message sent to: 2056 | local logical clock time: 87
+2023-03-08 11:46:12 INFO     Internal event | local logical clock time: 87
+2023-03-08 11:46:12 INFO     Message received: 93 | local logical clock time: 94 | length of message queue: 1
+2023-03-08 11:46:13 INFO     Message received: 95 | local logical clock time: 96 | length of message queue: 0
+2023-03-08 11:46:13 INFO     Message received: 101 | local logical clock time: 102 | length of message queue: 0
+2023-03-08 11:46:14 INFO     Internal event | local logical clock time: 103
+2023-03-08 11:46:14 INFO     Message received: 106 | local logical clock time: 107 | length of message queue: 0
+2023-03-08 11:46:15 INFO     Message received: 109 | local logical clock time: 110 | length of message queue: 0
+2023-03-08 11:46:15 INFO     Message received: 112 | local logical clock time: 113 | length of message queue: 0
+2023-03-08 11:46:16 INFO     Message sent to: 2056 | local logical clock time: 114
+2023-03-08 11:46:16 INFO     Internal event | local logical clock time: 114
+2023-03-08 11:46:16 INFO     Message received: 118 | local logical clock time: 119 | length of message queue: 0
+2023-03-08 11:46:17 INFO     Message received: 120 | local logical clock time: 121 | length of message queue: 1
+2023-03-08 11:46:17 INFO     Message received: 121 | local logical clock time: 122 | length of message queue: 0
+2023-03-08 11:46:18 INFO     Internal event | local logical clock time: 123
+2023-03-08 11:46:18 INFO     Message received: 131 | local logical clock time: 132 | length of message queue: 0
+2023-03-08 11:46:19 INFO     Message received: 133 | local logical clock time: 134 | length of message queue: 0
+2023-03-08 11:46:19 INFO     Message received: 135 | local logical clock time: 136 | length of message queue: 1
+2023-03-08 11:46:20 INFO     Message received: 137 | local logical clock time: 138 | length of message queue: 1
+2023-03-08 11:46:20 INFO     Message received: 140 | local logical clock time: 141 | length of message queue: 0
+2023-03-08 11:46:21 INFO     Internal event | local logical clock time: 142
+2023-03-08 11:46:21 INFO     Internal event | local logical clock time: 143
+2023-03-08 11:46:22 INFO     Internal event | local logical clock time: 144
+2023-03-08 11:46:22 INFO     Message sent to: 2056 | local logical clock time: 145
+2023-03-08 11:46:22 INFO     Internal event | local logical clock time: 145
+2023-03-08 11:46:23 INFO     Internal event | local logical clock time: 146
+2023-03-08 11:46:23 INFO     Message received: 159 | local logical clock time: 160 | length of message queue: 2
+2023-03-08 11:46:24 INFO     Message received: 160 | local logical clock time: 161 | length of message queue: 2
+2023-03-08 11:46:24 INFO     Message received: 161 | local logical clock time: 162 | length of message queue: 1
+2023-03-08 11:46:25 INFO     Message received: 162 | local logical clock time: 163 | length of message queue: 0
+2023-03-08 11:46:25 INFO     Message received: 171 | local logical clock time: 172 | length of message queue: 0
+2023-03-08 11:46:26 INFO     Internal event | local logical clock time: 173
+2023-03-08 11:46:26 INFO     Internal event | local logical clock time: 174
+2023-03-08 11:46:27 INFO     Message received: 182 | local logical clock time: 183 | length of message queue: 0
+2023-03-08 11:46:27 INFO     Internal event | local logical clock time: 184
+2023-03-08 11:46:28 INFO     Message received: 186 | local logical clock time: 187 | length of message queue: 1
+2023-03-08 11:46:28 INFO     Message received: 187 | local logical clock time: 188 | length of message queue: 2
+2023-03-08 11:46:29 INFO     Message received: 190 | local logical clock time: 191 | length of message queue: 2
+2023-03-08 11:46:29 INFO     Message received: 191 | local logical clock time: 192 | length of message queue: 1
+2023-03-08 11:46:30 INFO     Message received: 194 | local logical clock time: 195 | length of message queue: 0
+2023-03-08 11:46:30 INFO     Message received: 202 | local logical clock time: 203 | length of message queue: 0
+2023-03-08 11:46:31 INFO     Internal event | local logical clock time: 204
+2023-03-08 11:46:31 INFO     Messages sent to: 4056 and 2056 | local logical clock time: 205
+2023-03-08 11:46:32 INFO     Message received: 211 | local logical clock time: 212 | length of message queue: 0
+2023-03-08 11:46:32 INFO     Message received: 213 | local logical clock time: 214 | length of message queue: 0
+2023-03-08 11:46:33 INFO     Internal event | local logical clock time: 215
+2023-03-08 11:46:33 INFO     Message received: 221 | local logical clock time: 222 | length of message queue: 0
+2023-03-08 11:46:34 INFO     Internal event | local logical clock time: 223
+2023-03-08 11:46:34 INFO     Message received: 226 | local logical clock time: 227 | length of message queue: 1
+2023-03-08 11:46:35 INFO     Message received: 227 | local logical clock time: 228 | length of message queue: 1
+2023-03-08 11:46:35 INFO     Message received: 228 | local logical clock time: 229 | length of message queue: 0
+2023-03-08 11:46:36 INFO     Internal event | local logical clock time: 230
+2023-03-08 11:46:36 INFO     Message received: 237 | local logical clock time: 238 | length of message queue: 1
+2023-03-08 11:46:37 INFO     Message received: 239 | local logical clock time: 240 | length of message queue: 0
+2023-03-08 11:46:37 INFO     Message received: 244 | local logical clock time: 245 | length of message queue: 0
+2023-03-08 11:46:38 INFO     Message sent to: 2056 | local logical clock time: 246
+2023-03-08 11:46:38 INFO     Internal event | local logical clock time: 246
+2023-03-08 11:46:38 INFO     Message received: 250 | local logical clock time: 251 | length of message queue: 0
+2023-03-08 11:46:39 INFO     Message received: 253 | local logical clock time: 254 | length of message queue: 0
+2023-03-08 11:46:39 INFO     Internal event | local logical clock time: 255
+2023-03-08 11:46:40 INFO     Message received: 260 | local logical clock time: 261 | length of message queue: 0
+2023-03-08 11:46:40 INFO     Internal event | local logical clock time: 262
+2023-03-08 11:46:41 INFO     Message received: 265 | local logical clock time: 266 | length of message queue: 0
+2023-03-08 11:46:41 INFO     Internal event | local logical clock time: 267
+2023-03-08 11:46:42 INFO     Message sent to: 2056 | local logical clock time: 268
+2023-03-08 11:46:42 INFO     Internal event | local logical clock time: 268
+2023-03-08 11:46:42 INFO     Message received: 273 | local logical clock time: 274 | length of message queue: 2
+2023-03-08 11:46:43 INFO     Message received: 274 | local logical clock time: 275 | length of message queue: 1
+2023-03-08 11:46:43 INFO     Message received: 275 | local logical clock time: 276 | length of message queue: 1
+2023-03-08 11:46:44 INFO     Message received: 281 | local logical clock time: 282 | length of message queue: 0
+2023-03-08 11:46:44 INFO     Internal event | local logical clock time: 283
+2023-03-08 11:46:45 INFO     Message received: 288 | local logical clock time: 289 | length of message queue: 1
+2023-03-08 11:46:45 INFO     Message received: 289 | local logical clock time: 290 | length of message queue: 1
+2023-03-08 11:46:46 INFO     Message received: 291 | local logical clock time: 292 | length of message queue: 2
+2023-03-08 11:46:46 INFO     Message received: 294 | local logical clock time: 295 | length of message queue: 1
+2023-03-08 11:46:47 INFO     Message received: 296 | local logical clock time: 297 | length of message queue: 0
+2023-03-08 11:46:47 INFO     Message received: 304 | local logical clock time: 305 | length of message queue: 1
+2023-03-08 11:46:48 INFO     Message received: 305 | local logical clock time: 306 | length of message queue: 0
+2023-03-08 11:46:48 INFO     Internal event | local logical clock time: 307
+2023-03-08 11:46:49 INFO     Messages sent to: 4056 and 2056 | local logical clock time: 308
+2023-03-08 11:46:49 INFO     Internal event | local logical clock time: 309
+2023-03-08 11:46:50 INFO     Internal event | local logical clock time: 310
+2023-03-08 11:46:50 INFO     Message received: 321 | local logical clock time: 322 | length of message queue: 1
+2023-03-08 11:46:51 INFO     Message received: 323 | local logical clock time: 324 | length of message queue: 1
+2023-03-08 11:46:51 INFO     Message received: 325 | local logical clock time: 326 | length of message queue: 0
+2023-03-08 11:46:52 INFO     Internal event | local logical clock time: 327
+2023-03-08 11:46:52 INFO     Message received: 335 | local logical clock time: 336 | length of message queue: 0
+2023-03-08 11:46:53 INFO     Message received: 337 | local logical clock time: 338 | length of message queue: 0
+2023-03-08 11:46:53 INFO     Message received: 339 | local logical clock time: 340 | length of message queue: 0
+2023-03-08 11:46:54 INFO     Internal event | local logical clock time: 341
+2023-03-08 11:46:54 INFO     Message received: 346 | local logical clock time: 347 | length of message queue: 0
+2023-03-08 11:46:55 INFO     Internal event | local logical clock time: 348
+2023-03-08 11:46:55 INFO     Message received: 351 | local logical clock time: 352 | length of message queue: 1
+2023-03-08 11:46:56 INFO     Message received: 352 | local logical clock time: 353 | length of message queue: 2
+2023-03-08 11:46:56 INFO     Message received: 354 | local logical clock time: 355 | length of message queue: 3
+2023-03-08 11:46:57 INFO     Message received: 355 | local logical clock time: 356 | length of message queue: 2
+2023-03-08 11:46:57 INFO     Message received: 357 | local logical clock time: 358 | length of message queue: 1
+2023-03-08 11:46:58 INFO     Message received: 358 | local logical clock time: 359 | length of message queue: 1
+2023-03-08 11:46:58 INFO     Message received: 366 | local logical clock time: 367 | length of message queue: 0
+2023-03-08 11:46:59 INFO     Message received: 372 | local logical clock time: 373 | length of message queue: 1
+
