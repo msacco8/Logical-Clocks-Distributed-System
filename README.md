@@ -28,11 +28,11 @@ Other than these main bulletpoints, the project was pretty straightforward and w
 
 | Trial | Port 1 | Port 2 | Port 3 | Summary                                                             |
 | ----- | ------ | ------ | ------ | ------------------------------------------------------------------- |
-| 1     | 1      | 1      | 1      | Base case, well synchronized.                                       |
-| 2     | 5      | 6      | 4      | Port 2 led, frequent small jumps for others.                        |
-| 3     | 4      | 1      | 4      | Long message queue for port 2. 1 and 3 synchronized.                |
-| 4     | 3      | 2      | 1      | Message queue swells for port 3, interesting contrast from trial 2. |
-| 5     | 1      | 2      | 6      | Port 1 only received messages and queue grew rapidly.               |
+| 1     | 1 op/s | 1 op/s | 1 op/s | Base case, well synchronized.                                       |
+| 2     | 5 op/s | 6 op/s | 4 op/s | Port 2 led, frequent small jumps for others.                        |
+| 3     | 4 op/s | 1 op/s | 4 op/s | Long message queue for port 2. 1 and 3 synchronized.                |
+| 4     | 3 op/s | 2 op/s | 1 op/s | Message queue swells for port 3, interesting contrast from trial 2. |
+| 5     | 1 op/s | 2 op/s | 6 op/s | Port 1 only received messages and queue grew rapidly.               |
 
 - After the main trials we tried limiting the variation in the clock cycles and having a smaller probability of the event being internal. Less variation in the clock cycles created greater synchronization, but had differing effects if the cycles per second were relatively high or low. The queue swells occurred in the trials with lower rates, while the queue often grew linearly for the higher rates.
 - Reducing the probability of an internal event made the queue swells more prevalent for each machine, regardless of which had the highest rate, although the effects of higher rates contributed to less of these swells. This makes sense given the fact that more messages were obviously being sent. When the probability of an internal event was lowered and the variability was decreased there were interestingly fewer jumps and the clocks appeared to be more synchronized. This also follows because if each machine is updating the others with its internal clock at a greater rate than before then the machines will obviously e closer in sync and display less cycle jum
